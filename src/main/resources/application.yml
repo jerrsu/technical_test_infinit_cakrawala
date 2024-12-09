@@ -1,0 +1,34 @@
+## YAML Template.
+---
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2MB
+      max-file-size: 200MB
+      max-request-size: 215MB
+  application:
+    name: Technical Test Interview
+  datasource:
+    driver-class-name: "org.postgresql.Driver"
+    name: "postgres"
+    username: postgres
+    password: suparman
+    url: "jdbc:postgresql://localhost:5432/technical_test"
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+      jdbc:
+        time_zone: GMT+7
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+        jdbc.lob.non_contextual_creation: true
+        enable_lazy_load_no_trans: true
+  main:
+    allow-circular-references: true
+server:
+  port: 8080
+jwt:
+  secret: technical.test

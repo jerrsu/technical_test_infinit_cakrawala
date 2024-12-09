@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "0e2c0e7c-10ad-4aa9-9141-a8327dbb98b5",
+		"name": "Tech Test Infinit Cakrawala",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5677441"
+	},
+	"item": [
+		{
+			"name": "Healt Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/actuator/health",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"pass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJST0xFIjpbImFkbWluIl0sInN1YiI6ImFkbWluIiwiZXhwIjoxNzMzNzU1ODMwLCJpYXQiOjE3MzM3Mzc4MzAsInVzZXJuYW1lIjoiYWRtaW4ifQ.WEI_No4s7uwM-MLyqEdefkG_CTRuaDdyEnW6cXHgdWjbLdldeJTzO5ey4oGWqq35bdyEwL59RSlICfpVhtLwNw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/employee",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Employee Pagination",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJST0xFIjpbImFkbWluIl0sInN1YiI6ImFkbWluIiwiZXhwIjoxNzMzNzU1ODMwLCJpYXQiOjE3MzM3Mzc4MzAsInVzZXJuYW1lIjoiYWRtaW4ifQ.WEI_No4s7uwM-MLyqEdefkG_CTRuaDdyEnW6cXHgdWjbLdldeJTzO5ey4oGWqq35bdyEwL59RSlICfpVhtLwNw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/employee/page",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"page"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJST0xFIjpbImFkbWluIl0sInN1YiI6ImFkbWluIiwiZXhwIjoxNzMzNzc5Mzk4LCJpYXQiOjE3MzM3NjEzOTgsInVzZXJuYW1lIjoiYWRtaW4ifQ.0tTksIaOqhoQ6xHGkHZOwv6dS-bXSjO0BpB9EayNkZQ5EjMdTTF-76ykVz3_fyMjo1wychpp8Xq6QIhUiQ8SMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/employee/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJST0xFIjpbImFkbWluIl0sInN1YiI6ImFkbWluIiwiZXhwIjoxNzMzNzU1ODMwLCJpYXQiOjE3MzM3Mzc4MzAsInVzZXJuYW1lIjoiYWRtaW4ifQ.WEI_No4s7uwM-MLyqEdefkG_CTRuaDdyEnW6cXHgdWjbLdldeJTzO5ey4oGWqq35bdyEwL59RSlICfpVhtLwNw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Emily Chen\",\n    \"jobTitle\":\"Analyst\",\n    \"salary\":48000,\n    \"department\":\"Marketing\",\n    \"jobDate\":\"2023-06-02\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/employee",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJST0xFIjpbImFkbWluIl0sInN1YiI6ImFkbWluIiwiZXhwIjoxNzMzNzU1ODMwLCJpYXQiOjE3MzM3Mzc4MzAsInVzZXJuYW1lIjoiYWRtaW4ifQ.WEI_No4s7uwM-MLyqEdefkG_CTRuaDdyEnW6cXHgdWjbLdldeJTzO5ey4oGWqq35bdyEwL59RSlICfpVhtLwNw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Emily Chen\",\n    \"jobTitle\":\"Analyst\",\n    \"salary\":48000,\n    \"department\":\"Marketing\",\n    \"jobDate\":\"2023-06-02\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/employee/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJST0xFIjpbImFkbWluIl0sInN1YiI6ImFkbWluIiwiZXhwIjoxNzMzNzU1ODMwLCJpYXQiOjE3MzM3Mzc4MzAsInVzZXJuYW1lIjoiYWRtaW4ifQ.WEI_No4s7uwM-MLyqEdefkG_CTRuaDdyEnW6cXHgdWjbLdldeJTzO5ey4oGWqq35bdyEwL59RSlICfpVhtLwNw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/employee/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
